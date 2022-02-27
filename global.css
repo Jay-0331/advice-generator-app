@@ -8,9 +8,50 @@
 
 html,
 body {
-  color: white;
+  color: rgb(36, 36, 36);
+  background-image: url("./images/background-light.png");
+  background-position: center;
+  transition: background-image 1s ease-in-out;
   width: 100%;
   height: 100%;
   font-family: "Anton", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body.dark {
+  color: white;
+  background-image: url("./images/background-dark.png");
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./images/background-light-tablet.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  body.dark {
+    background-image: url("./images/background-dark-tablet.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    background-image: url("./images/background-light-mobile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  body.dark {
+    background-image: url("./images/background-dark-mobile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
